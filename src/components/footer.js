@@ -5,7 +5,7 @@ const Footer = () => (
         <div className="container content">
             <p>
                 Copyright © {new Date().getFullYear()} <strong>Arjan van Hugten</strong>. 
-                Developer at <a href="https://www.avivasolutions.nl/">Aviva Solutions</a>.
+                Developer at <a href="https://www.avivasolutions.nl/" target="_blank">Aviva Solutions</a>.
             </p>
         </div>
     </footer>
