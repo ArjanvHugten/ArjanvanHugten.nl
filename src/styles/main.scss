@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+$primary: #3298dc;
+
+@import "~bulma/bulma.sass";
+
+body {
+    &.default {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+}
