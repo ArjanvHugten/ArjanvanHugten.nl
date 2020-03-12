@@ -3,9 +3,9 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const ContactMe = () => (
+export default () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Contact me" />
       <div className="container">
         <h1 className="title">Contact me</h1>
         <h2 className="subtitle">
@@ -14,5 +14,3 @@ const ContactMe = () => (
       </div>
   </Layout>
 )
-
-export default ContactMe

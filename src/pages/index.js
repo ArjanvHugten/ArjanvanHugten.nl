@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+export default () => (
   <Layout>
     <SEO title="Home" />
       <div className="container">
@@ -12,9 +12,7 @@ const IndexPage = () => (
         <h2 className="subtitle">
           A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
         </h2>
-        <Link to="/page-2/">Go to page 2</Link>
+        <Link to="/blogs/">Go to the blog</Link>
       </div>
   </Layout>
 )
-
-export default IndexPage
