@@ -61,6 +61,11 @@ module.exports = {
         sitemap: 'https://arjanvanhugten.nl/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+      },
+    },
   ],
 }

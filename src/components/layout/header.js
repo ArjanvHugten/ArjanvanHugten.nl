@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => {
       <div className="container">
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item">{siteTitle}</Link>
+            <Link to="/" className="navbar-item primary-color">{siteTitle}</Link>
 
             <a role="button" className={`navbar-burger burger ${menuActive ? "is-active" : "" }`} onClick={() => setMenuState(!menuActive)} aria-label="menu" aria-expanded="false" data-target="navigationbar">
               <span aria-hidden="true"></span>
@@ -29,7 +29,6 @@ const Header = ({ siteTitle }) => {
               <div className="navbar-item">
                 <div className="buttons">
                   <Link to="/contact-me/" className="button is-primary"><strong>Contact me</strong></Link>
-                  <Link to="/blogs/" className="button is-light">Andere link</Link>
                 </div>
               </div>
             </div>

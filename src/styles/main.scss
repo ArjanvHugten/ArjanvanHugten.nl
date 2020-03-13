@@ -13,8 +13,34 @@ body {
 }
 
 footer {
-    position: absolute;
-    width: 100%;
-    right: 0;
-    bottom: 0;
+  padding: 0 20px 20px;
+}
+
+form {
+  &.contact-me-form {
+    max-width: 800px;
+
+    .label {
+      font-weight: 400;
+    }
+  }
+}
+
+.social-icons{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+a {
+  &.social-icon-link {
+    color: $black;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.primary-color {
+  color: $primary;
 }

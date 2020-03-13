@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Breadcrumb from '../components/breadcrumb'
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Breadcrumb from '../components/general/breadcrumb'
+import Layout from "../components/layout/layout"
+import SEO from "../components/layout/seo"
 
 export default ({ pageContext, data }) => {
   const { breadcrumb: { crumbs } } = pageContext
