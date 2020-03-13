@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import BlogListItem from "../components/blog-list-item"
-import SEO from "../components/seo"
+import Layout from "../components/layout/layout"
+import BlogListItem from "../components/blog/blog-list-item"
+import SEO from "../components/layout/seo"
 
 export default ({ data }) => {
   const edges = data.allMarkdownRemark.edges
@@ -14,9 +14,6 @@ export default ({ data }) => {
       <SEO title="Blogs" />
         <div className="container">
           <h1 className="title">Blogs</h1>
-          <h2 className="subtitle">
-            Here you can find all my blogs.
-          </h2>
           <div>{posts}</div>
         </div>
     </Layout>
