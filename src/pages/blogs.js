@@ -13,8 +13,10 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Blogs" />
         <div className="container">
-          <h1 className="title">Blogs</h1>
-          <div>{posts}</div>
+          <div className="column is-three-fifths">
+            <h1 className="title">Blogs</h1>
+            {posts}
+          </div>
         </div>
     </Layout>
   )
@@ -31,6 +33,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             title
+            intro
           }
         }
       }

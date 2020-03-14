@@ -12,7 +12,7 @@ export default ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <SEO title="Blog title" />
+      <SEO title="{frontmatter.title}" />
         <div className="container">
           <Breadcrumb crumbs={crumbs} />
           <h1 className="title">{frontmatter.title}</h1>
