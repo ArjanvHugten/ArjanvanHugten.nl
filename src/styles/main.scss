@@ -52,3 +52,22 @@ a {
     }
   }
 }
+
+.main-page {
+  margin-bottom: -3rem;
+
+  .small-title {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.search-results {
+  padding-top: 20px;
+
+  .box {
+    .content {
+      color: black;
+    }
+  }
+}

@@ -1,7 +1,11 @@
+
+const queries = require("./src/utils/algolia")
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `Arjan van Hugten`,
-    description: `This is the blog of Arjan van Hugten`,
+    description: `Software development blogs by Arjan van Hugten.`,
     author: `Arjan van Hugten`,
     siteUrl: `https://arjanvanhugten.nl`,
   },
@@ -30,9 +34,10 @@ module.exports = {
         name: `Arjan van Hugten blog`,
         short_name: `ArjanvanHugten`,
         start_url: `/`,
-        background_color: `#000000`,
-        theme_color: `#000000`,
+        background_color: `#ffffff`,
+        theme_color: `#3298dc`,
         display: `minimal-ui`,
+        icon: `src/images/icon.png`,
       },
     },
     `gatsby-plugin-sitemap`,
@@ -63,9 +68,13 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-netlify`,
+      resolve: `gatsby-plugin-algolia`,
       options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries,
       },
     },
+    `gatsby-plugin-force-trailing-slashes`,
   ],
 }

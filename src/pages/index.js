@@ -12,10 +12,11 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-        <div className="container">
+        <div className="container main-page">
           <Socials />
           <div className="columns">
             <div className="column is-4 is-offset-4">
+              <h1 className="title small-title">Arjan van Hugten software development blogs</h1>
               <PersonalCard imageFluid={image}/>
             </div>
           </div>
