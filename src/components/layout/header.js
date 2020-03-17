@@ -1,12 +1,21 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+import { Link , navigate} from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from "prop-types"
 
 import '../../utils/fontawesome'
 
-const Header = ({ siteTitle }) => {
-  const [ menuActive, setMenuState ] = useState(false);
+const Header = ({ siteTitle, hideSearchBar }) => {
+  const [menuActive, setMenuState] = useState(false);
+  const [searchInput, setSearchInput] = useState('');
+
+  function handleSearchClick(event) { 
+    event.preventDefault()
+
+    navigate(`/search/`, {
+      state: { query: searchInput },
+    })
+  }
 
   return (
     <header>
@@ -29,19 +38,23 @@ const Header = ({ siteTitle }) => {
             </div>
 
             <div className="navbar-end">
-              <div className="navbar-item">
-                <div className="field has-addons" >
-                  <div className="control has-icons-left">
-                    <input className="input" type="text" placeholder="Search term" />
-                    <span className="icon is-small is-left">
-                      <FontAwesomeIcon icon="search" />
-                    </span>
+              { hideSearchBar === false && 
+                <form onSubmit={handleSearchClick}>
+                  <div className="navbar-item">
+                    <div className="field has-addons" >
+                        <div className="control has-icons-left">
+                          <input className="input" type="text" placeholder="Search term" value={searchInput} onChange={e => setSearchInput(e.target.value)} />
+                          <span className="icon is-small is-left">
+                            <FontAwesomeIcon icon="search" />
+                          </span>
+                        </div>
+                        <div className="control">
+                          <button type="submit" className="button">Search</button>
+                        </div>
+                      </div>
                   </div>
-                  <div className="control">
-                    <button className="button">Search</button>
-                  </div>
-                </div>
-              </div>
+                </form>
+              }
               <div className="navbar-item">
                 <div className="buttons">
                   <Link to="/contact-me/" className="button is-primary"><strong>Contact me</strong></Link>
