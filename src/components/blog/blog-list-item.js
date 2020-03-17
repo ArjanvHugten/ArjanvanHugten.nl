@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 export default ({ blog }) => (
-    <div className="box blog-post">
+    <div className="box">
         <Link to={blog.frontmatter.path}>
             <article className="media">
                 <div className="media-content">

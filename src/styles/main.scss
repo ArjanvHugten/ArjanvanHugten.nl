@@ -4,12 +4,8 @@ $primary: #3298dc;
 
 @import "~bulma/bulma.sass";
 
-body {
-    &.default {
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-    }
+.primary-color {
+  color: $primary;
 }
 
 footer {
@@ -17,57 +13,13 @@ footer {
 }
 
 form {
-  &.contact-me-form {
-    max-width: 800px;
-
-    .label {
-      font-weight: 400;
-    }
+  .label {
+    font-weight: 400;
   }
-}
-
-.social-icons{
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-a {
-  &.social-icon-link {
-    color: $black;
-
-    &:hover {
-      color: $primary;
-    }
-  }
-}
-
-.primary-color {
-  color: $primary;
 }
 
 .box {
-  &.blog-post {
-    .content {
-      color: black;
-    }
-  }
-}
-
-.main-page {
-  margin-bottom: -3rem;
-
-  .small-title {
-    font-size: 1rem;
-    text-align: center;
-  }
-}
-
-.search-results {
-  padding-top: 20px;
-
-  .box {
-    .content {
-      color: black;
-    }
+  .content {
+    color: black;
   }
 }

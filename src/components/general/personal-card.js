@@ -19,14 +19,12 @@ export default ({ imageFluid }) => (
             </div>
 
             <div className="content">
-            <p>
-                Hi, welcome to my site. I'm Software Developer at Aviva Solutions in Eindhoven. 
-            </p>
-            <span className="primary-color">C#</span> | <span className="primary-color">Javascript</span> | <span className="primary-color">Azure Devops</span> 
-            <br/>
-            <span className="primary-color">Kentico</span> | <span className="primary-color">Python</span> | <span className="primary-color">Git</span> | <span className="primary-color">Docker</span> 
-            <br/>
-            <time dateTime="1998-08-30">30 August 1998</time>
+                <p>Hi, welcome to my site. I'm Software Developer at Aviva Solutions in Eindhoven.</p>
+                <span className="primary-color">C#</span> | <span className="primary-color">Javascript</span> | <span className="primary-color">Azure Devops</span> 
+                <br/>
+                <span className="primary-color">Kentico</span> | <span className="primary-color">Python</span> | <span className="primary-color">Git</span> | <span className="primary-color">Docker</span> 
+                <br/>
+                <time dateTime="1998-08-30">30 August 1998</time>
             </div>
         </div>
     </div>

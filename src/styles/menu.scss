@@ -1,0 +1,10 @@
+@import "./main.scss";
+
+@include touch {
+    .navbar-start, .navbar-end {
+        .navbar-item {
+            justify-content: center;
+            display: flex;
+        }
+    }
+}

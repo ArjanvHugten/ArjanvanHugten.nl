@@ -12,7 +12,11 @@ export default () => (
         <h2 className="subtitle">
           You can fill in the contact form below to get in touch.
         </h2>
-        <ContactForm />
+        <div className="columns">
+            <div className="column is-two-thirds-desktop">
+              <ContactForm />
+            </div>
+          </div>
       </div>
   </Layout>
 )

@@ -5,6 +5,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 import PersonalCard from "../components/general/personal-card"
 import Socials from "../components/general/socials"
+import "../styles/index.scss"
 
 export default ({ data }) => {
   const image = data.file.childImageSharp.fluid
@@ -13,9 +14,9 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Home" />
         <div className="container main-page">
-          <Socials />
-          <div className="columns">
-            <div className="column is-4 is-offset-4">
+          <div className="columns is-centered">
+            <div className="column is-two-thirds-tablet is-half-desktop is-one-third-widescreen">
+              <Socials />
               <h1 className="title small-title">Arjan van Hugten software development blogs</h1>
               <PersonalCard imageFluid={image}/>
             </div>

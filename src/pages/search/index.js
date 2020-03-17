@@ -7,6 +7,7 @@ import SearchInput from "../../components/search/search-input"
 import SearchResultsComponent from "../../components/search/search-results"
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/layout/seo"
+import "../../styles/search.scss"
 
 const searchIndice = { name: `Blogs`, title: `Blog Posts`, hitComp: `BlogHit` }
 

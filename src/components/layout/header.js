@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from "prop-types"
 
 import '../../utils/fontawesome'
+import "../../styles/menu.scss"
 
 const Header = ({ siteTitle, hideSearchBar }) => {
   const [menuActive, setMenuState] = useState(false);

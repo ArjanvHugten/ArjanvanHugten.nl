@@ -1,0 +1,22 @@
+@import "./main.scss";
+
+.main-page {
+    margin-bottom: -3rem;
+  
+    .small-title {
+      font-size: 1rem;
+      text-align: center;
+    }
+}
+
+.social-icons {
+    a {
+        &.social-icon-link {
+            color: $black;
+        
+            &:hover {
+              color: $primary;
+            }
+        }
+    }
+}
