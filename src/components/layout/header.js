@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link , navigate} from "gatsby"
+import { Link , navigate, useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from "prop-types"
 
@@ -7,6 +7,24 @@ import '../../utils/fontawesome'
 import "../../styles/menu.scss"
 
 const Header = ({ siteTitle, hideSearchBar }) => {
+  const data = useStaticQuery(graphql`
+      query NavbarContentQuery {
+        navbarData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "navbar" } } }) {
+          edges {
+            node {
+              frontmatter {
+                menuItems {
+                  label
+                  linkURL
+                }         
+              }
+            }
+          }
+        } 
+      }
+  `)
+  const { frontmatter: navbar } = data.navbarData.edges[0].node
+
   const [menuActive, setMenuState] = useState(false);
   const [searchInput, setSearchInput] = useState('');
 
@@ -34,8 +52,9 @@ const Header = ({ siteTitle, hideSearchBar }) => {
 
           <div id="navigationbar" className={`navbar-menu ${menuActive ? "is-active" : "" }`}>
             <div className="navbar-start">
-              <Link to="/" className="navbar-item">Home</Link>
-              <Link to="/blogs/" className="navbar-item">Blogs</Link>
+              { navbar.menuItems.map( menuItem =>
+                <Link key={menuItem.label} to={menuItem.linkURL} className="navbar-item" activeClassName="is-active">{menuItem.label}</Link>
+              )}
             </div>
 
             <div className="navbar-end">

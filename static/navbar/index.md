@@ -1,4 +1,5 @@
 ---
+templateKey: navbar
 menuItems:
   - label: Home
     linkURL: /

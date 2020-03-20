@@ -8,7 +8,8 @@ import Socials from "../components/general/socials"
 import "../styles/index.scss"
 
 export default ({ data }) => {
-  const image = data.file.childImageSharp.fluid
+  const image = data.profilePicture.childImageSharp.fluid
+  const { frontmatter: home } = data.homePageData.edges[0].node
 
   return (
     <Layout>
@@ -16,9 +17,9 @@ export default ({ data }) => {
         <div className="container main-page">
           <div className="columns is-centered">
             <div className="column is-two-thirds-tablet is-half-desktop is-one-third-widescreen">
-              <Socials />
-              <h1 className="title small-title">Arjan van Hugten software development blogs</h1>
-              <PersonalCard imageFluid={image}/>
+              <Socials socials={home.socials}/>
+              <h1 className="title small-title">{home.title}</h1>
+              <PersonalCard data={home} imageFluid={image}/>
             </div>
           </div>
         </div>
@@ -27,13 +28,34 @@ export default ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query {
-    file(relativePath: { eq: "profile-picture.png" }) {
+  query HomePageQuery {
+    profilePicture: file(relativePath: { eq: "profile-picture.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
+    homePageData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "homepage" } } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            name
+            function
+            description
+            birthdate
+            techstack {
+              label
+            }
+            socials {
+              label
+              icon
+              linkURL
+            }
+          }
+        }
+      }
+    }
   }
-`
+`;

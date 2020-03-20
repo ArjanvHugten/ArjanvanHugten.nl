@@ -1,5 +1,11 @@
 @import "./main.scss";
 
+.navbar-item {
+    &.is-active {
+        background-color: #fafafa !important;
+    }
+}
+
 @include touch {
     .navbar-start, .navbar-end {
         .navbar-item {

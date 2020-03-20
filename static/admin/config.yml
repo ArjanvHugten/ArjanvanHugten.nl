@@ -13,6 +13,7 @@ collections:
         name: "homepage"
         label: "Homepage"
         fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "homepage" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Function", name: "function", widget: "string" }
@@ -35,8 +36,9 @@ collections:
     files:
       - file: "static/navbar/index.md"
         name: "navbar"
-        label: "navbar"
+        label: "Navbar"
         fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "navbar" }
           - { 
               label: "Menu Items", 
               name: "menuItems", 
@@ -55,4 +57,5 @@ collections:
         name: "footer"
         label: "Footer"
         fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "footer" }
           - { label: "Text", name: "text", widget: "text" }

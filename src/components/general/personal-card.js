@@ -1,31 +1,37 @@
 import React from "react"
 import Img from "gatsby-image"
 
-export default ({ imageFluid }) => (
-    <div className="card">
-        <div className="card-image">
-            <figure className="image">
-                <Img fluid={imageFluid} alt="My profile picture" imgStyle={{objectFit: 'contain'}} />
-            </figure>
-        </div>
-        <div className="card-content">
-            <div className="media">
-            <div className="media-content">
-                <p className="title is-4">Arjan van Hugten</p>
-                <p className="subtitle is-6">
-                    Software Developer
-                </p>
+export default ({ data, imageFluid }) => {
+    const birthDate = new Date(data.birthdate)
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    
+    return (
+        <div className="card">
+            <div className="card-image">
+                <figure className="image">
+                    <Img fluid={imageFluid} alt="My profile picture" imgStyle={{objectFit: 'contain'}} />
+                </figure>
             </div>
-            </div>
+            <div className="card-content">
+                <div className="media">
+                <div className="media-content">
+                    <p className="title is-4">{data.name}</p>
+                    <p className="subtitle is-6">{data.function}</p>
+                </div>
+                </div>
 
-            <div className="content">
-                <p>Hi, welcome to my site. I'm Software Developer at Aviva Solutions in Eindhoven.</p>
-                <span className="primary-color">C#</span> | <span className="primary-color">Javascript</span> | <span className="primary-color">Azure Devops</span> 
-                <br/>
-                <span className="primary-color">Kentico</span> | <span className="primary-color">Python</span> | <span className="primary-color">Git</span> | <span className="primary-color">Docker</span> 
-                <br/>
-                <time dateTime="1998-08-30">30 August 1998</time>
+                <div className="content">
+                    <p>{data.description}</p>
+                    {data.techstack.map(tech => 
+                        <span key={tech.label}>
+                            <span className="primary-color">{tech.label}</span>
+                            <span> | </span>
+                        </span>
+                    )}
+                    <br/>
+                    <span>{birthDate.toLocaleDateString('en-US', options)}</span>
+                </div>
             </div>
         </div>
-    </div>
-)
+    )
+}
