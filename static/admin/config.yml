@@ -1,0 +1,58 @@
+backend:
+  name: github
+  repo: ArjanvHugten/ArjanvanHugten.nl
+  
+media_folder: static/images
+public_folder: /images
+  
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - file: "static/home/index.md"
+        name: "homepage"
+        label: "Homepage"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Function", name: "function", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Tech stack", name: "techstack", widget: "list", fields: [{ label: "Label", name: "label", widget: "string" }]}
+          - { label: "Birthdate", name: "birthdate", widget: "datetime" }
+          - { 
+            label: "Socials", 
+            name: "socials",
+            widget: "list", 
+            fields: [
+              { label: "Label", name: "label", widget: "string" },
+              { label: "Icon", name: "icon", widget: "string" },
+              { label: "Link URL", name: "linkURL", widget: "string" },
+            ]
+          }
+
+  - name: "navbar"
+    label: "Navbar"
+    files:
+      - file: "static/navbar/index.md"
+        name: "navbar"
+        label: "navbar"
+        fields:
+          - { 
+              label: "Menu Items", 
+              name: "menuItems", 
+              widget: "list", 
+              fields: [
+                { label: "Label", name: "label", widget: "string" },
+                { label: "Link Type", name: "linkType", widget: "select", options: ["internal", "external"] },
+                { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (e.g. /contact-me/) if the link is an internal link." },
+              ],
+            }
+
+  - name: "footer"
+    label: "Footer"
+    files:
+      - file: "static/footer/index.md"
+        name: "footer"
+        label: "Footer"
+        fields:
+          - { label: "Text", name: "text", widget: "text" }
