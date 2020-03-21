@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 
-export default ({ data, imageFluid }) => {
+export default ({ data }) => {
     const birthDate = new Date(data.birthdate)
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     
@@ -9,7 +9,9 @@ export default ({ data, imageFluid }) => {
         <div className="card">
             <div className="card-image">
                 <figure className="image">
-                    <Img fluid={imageFluid} alt="My profile picture" imgStyle={{objectFit: 'contain'}} />
+                    { typeof data.cardImage === 'string' ? 
+                        <img src={data.cardImage} alt="Profilepicture" /> : <Img fluid={data.cardImage.childImageSharp.fluid} alt="My profile picture" imgStyle={{objectFit: 'contain'}} />
+                    }
                 </figure>
             </div>
             <div className="card-content">

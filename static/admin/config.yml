@@ -4,6 +4,11 @@ backend:
   
 media_folder: static/images
 public_folder: /images
+
+publish_mode: editorial_workflow
+
+display_url: https://arjanvanhugten.nl
+site_url: https://arjanvanhugten.nl
   
 collections:
   - name: "homepage"
@@ -15,6 +20,7 @@ collections:
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "homepage" }
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Card image", name: "cardImage", widget: "image" }
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Function", name: "function", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }

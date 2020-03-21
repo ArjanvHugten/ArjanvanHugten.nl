@@ -8,7 +8,6 @@ import Socials from "../components/general/socials"
 import "../styles/index.scss"
 
 export default ({ data }) => {
-  const image = data.profilePicture.childImageSharp.fluid
   const { frontmatter: home } = data.homePageData.edges[0].node
 
   return (
@@ -19,7 +18,7 @@ export default ({ data }) => {
             <div className="column is-two-thirds-tablet is-half-desktop is-one-third-widescreen">
               <Socials socials={home.socials}/>
               <h1 className="title small-title">{home.title}</h1>
-              <PersonalCard data={home} imageFluid={image}/>
+              <PersonalCard data={home} />
             </div>
           </div>
         </div>
@@ -29,18 +28,18 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query HomePageQuery {
-    profilePicture: file(relativePath: { eq: "profile-picture.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     homePageData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "homepage" } } }) {
       edges {
         node {
           frontmatter {
             title
+            cardImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             name
             function
             description

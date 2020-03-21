@@ -33,6 +33,13 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+          options: {
+              path: `${__dirname}/static/images`,
+              name: 'images',
+          },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -58,7 +65,17 @@ module.exports = {
         pageTransitionDelay: 0,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+          plugins: [
+              'gatsby-remark-relative-images',
+              {
+                  resolve: `gatsby-remark-images`,
+              },
+          ],
+      },
+    },
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
@@ -84,6 +101,11 @@ module.exports = {
     },
     `gatsby-plugin-force-trailing-slashes`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
   ],
 }
