@@ -1,12 +1,11 @@
 ---
 templateKey: homepage
-title: My Software development blogs
+title: My Software development blogsssss
 name: Arjan van Hugten
 function: Software Developer
 description: >-
-  Welcome to my site. I'm Software Developer at Aviva Solutions in
-  Eindhoven. On this site I will be posting blogs about my software development
-  adventures.
+  Welcome to my site. I'm Software Developer at Aviva Solutions in Eindhoven. On
+  this site I will be posting blogs about my software development adventures.
 techstack:
   - label: 'C#'
   - label: Javascript
