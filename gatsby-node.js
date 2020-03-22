@@ -3,7 +3,11 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-    fmImagesToRelative(node);
+    // Ignore navbar because there are paths that don't have to be relative.
+    if(!node.frontmatter || node.frontmatter.templateKey !== `navbar`){
+      fmImagesToRelative(node);
+    }
+
     const { createNodeField } = actions
     if (node.internal.type === `MarkdownRemark`) {
       const slug = createFilePath({ node, getNode, basePath: `pages` })
