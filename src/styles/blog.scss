@@ -1,0 +1,28 @@
+.section {
+    padding-top: 10px !important; 
+}
+
+.gatsby-highlight {
+    max-width: 700px;
+    font-size: 12px;
+    
+    .tag, .number {
+        display: inline;
+        padding: inherit;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: inherit;
+        line-height: inherit;
+        text-align: inherit;
+        vertical-align: inherit;
+        border-radius: inherit;
+        font-weight: inherit;
+        white-space: inherit;
+        background: inherit;
+        margin: inherit;
+    }
+}
+
+.gatsby-resp-image-wrapper {
+    margin: 0 !important;
+}

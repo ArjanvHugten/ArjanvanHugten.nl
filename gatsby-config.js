@@ -22,6 +22,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+          path: `${__dirname}/static/images`,
+          name: 'images',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `blogs`,
         path: `${__dirname}/blogs`,
       },
@@ -32,13 +39,6 @@ module.exports = {
         name: `cms`,
         path: `${__dirname}/static`,
       },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-          options: {
-              path: `${__dirname}/static/images`,
-              name: 'images',
-          },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -72,6 +72,18 @@ module.exports = {
               'gatsby-remark-relative-images',
               {
                   resolve: `gatsby-remark-images`,
+                  options: {
+                    maxWidth: 700,
+                  },
+              },
+              {
+                resolve: `gatsby-remark-prismjs`,
+                options: {
+                  classPrefix: "language-",
+                  inlineCodeMarker: null,
+                  showLineNumbers: false,
+                  noInlineHighlight: false,
+                },
               },
           ],
       },

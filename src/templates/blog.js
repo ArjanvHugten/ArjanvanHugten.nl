@@ -5,6 +5,9 @@ import Breadcrumb from '../components/general/breadcrumb'
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
 
+import "../styles/blog.scss"
+import "prismjs/themes/prism-tomorrow.css"
+
 export default ({ pageContext, data }) => {
   const { breadcrumb: { crumbs } } = pageContext
   const { markdownRemark } = data

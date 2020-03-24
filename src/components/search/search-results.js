@@ -16,9 +16,9 @@ export default connectHits(({ hits }) => (
                                     <Snippet attribute="excerpt" hit={hit} tagName="mark" />
                                 </p>
                             </div>
-                            <button className="button is-primary"><strong>Read</strong></button>
                         </div>
                     </article>
+                    <button className="button is-fullwidth"><strong>Read more</strong></button>
                 </Link>
             </div>
         ))}
