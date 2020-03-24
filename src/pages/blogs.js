@@ -13,9 +13,11 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Blogs" />
         <div className="container">
-          <div className="column is-three-fifths">
-            <h1 className="title">Blogs</h1>
-            {posts}
+          <div className="columns is-centered">
+            <div className="column is-full">
+              <h1 className="title">Blogs</h1>
+              {posts}
+            </div>
           </div>
         </div>
     </Layout>
@@ -34,6 +36,14 @@ export const pageQuery = graphql`
             path
             title
             intro
+            tags
+            cardImage {
+              childImageSharp {
+                fluid(quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

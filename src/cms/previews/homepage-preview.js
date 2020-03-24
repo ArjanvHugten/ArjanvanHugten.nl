@@ -9,7 +9,6 @@ import "../../styles/index.scss"
 
 const HomePagePreview = ({ entry }) => {
   const data = entry.getIn(["data"]).toJS();
-  console.log(data)
 
   return (
     <section className="section">
