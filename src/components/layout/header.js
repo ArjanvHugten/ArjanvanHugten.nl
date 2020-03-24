@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import { Link , navigate, useStaticQuery, graphql } from "gatsby"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 
+import SearchInput from '../search/search-navbar-form'
 import '../../utils/fontawesome'
 import "../../styles/menu.scss"
 
@@ -23,18 +23,9 @@ const Header = ({ siteTitle, hideSearchBar }) => {
         } 
       }
   `)
+
   const { frontmatter: navbar } = data.navbarData.edges[0].node
-
   const [menuActive, setMenuState] = useState(false);
-  const [searchInput, setSearchInput] = useState('');
-
-  function handleSearchClick(event) { 
-    event.preventDefault()
-
-    navigate(`/search/`, {
-      state: { query: searchInput },
-    })
-  }
 
   return (
     <header>
@@ -52,6 +43,11 @@ const Header = ({ siteTitle, hideSearchBar }) => {
 
           <div id="navigationbar" className={`navbar-menu ${menuActive ? "is-active" : "" }`}>
             <div className="navbar-start">
+              { hideSearchBar === false && 
+                  <div className="navbar-item is-hidden-desktop">
+                    <SearchInput />
+                  </div>
+              }
               { navbar.menuItems.map( menuItem =>
                 <Link key={menuItem.label} to={menuItem.linkURL} className="navbar-item" activeClassName="is-active">{menuItem.label}</Link>
               )}
@@ -59,21 +55,9 @@ const Header = ({ siteTitle, hideSearchBar }) => {
 
             <div className="navbar-end">
               { hideSearchBar === false && 
-                <form onSubmit={handleSearchClick}>
-                  <div className="navbar-item">
-                    <div className="field has-addons" >
-                        <div className="control has-icons-left">
-                          <input className="input" type="text" placeholder="Search term" value={searchInput} onChange={e => setSearchInput(e.target.value)} />
-                          <span className="icon is-small is-left">
-                            <FontAwesomeIcon icon="search" />
-                          </span>
-                        </div>
-                        <div className="control">
-                          <button type="submit" className="button">Search</button>
-                        </div>
-                      </div>
+                  <div className="navbar-item is-hidden-touch">
+                    <SearchInput />
                   </div>
-                </form>
               }
               <div className="navbar-item">
                 <div className="buttons">

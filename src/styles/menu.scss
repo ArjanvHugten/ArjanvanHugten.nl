@@ -1,8 +1,10 @@
 @import "./main.scss";
 
-.navbar-item {
-    &.is-active {
-        background-color: #fafafa !important;
+@include desktop {
+    .navbar-item {
+        &.is-active {
+            background-color: #fafafa !important;
+        }
     }
 }
 
@@ -11,6 +13,14 @@
         .navbar-item {
             justify-content: center;
             display: flex;
+
+            &.is-active {
+                background-color: transparent !important;
+            }
+        }
+
+        form, .control.search-field, .buttons, .button {
+            width: 100%;
         }
     }
 }
