@@ -14,7 +14,7 @@ export default ({ pageContext, data }) => {
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout>
+    <Layout sectionClass={"blog-section"}>
       <SEO title={frontmatter.title} />
         <div className="container">
           <Breadcrumb crumbs={crumbs} />
