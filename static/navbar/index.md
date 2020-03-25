@@ -7,4 +7,7 @@ menuItems:
   - label: Blogs
     linkType: internal
     linkURL: /blogs/
+  - label: About me
+    linkType: internal
+    linkURL: /about-me/
 ---

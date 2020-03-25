@@ -16,6 +16,7 @@ export default ({ data }) => {
           <div className="columns is-centered">
             <div className="column is-full">
               <h1 className="title">Blogs</h1>
+              <h2 className="subtitle">Go ahead and read some of my blogs</h2>
               {posts}
             </div>
           </div>

@@ -5,8 +5,6 @@ backend:
 media_folder: static/images
 public_folder: /images
 
-publish_mode: editorial_workflow
-
 display_url: https://arjanvanhugten.nl
 site_url: https://arjanvanhugten.nl
   
@@ -65,3 +63,15 @@ collections:
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "footer" }
           - { label: "Text", name: "text", widget: "text" }
+
+  - name: "aboutme"
+    label: "About me"
+    files:
+      - file: "static/about-me/index.md"
+        name: "aboutme"
+        label: "About me"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutme" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }

@@ -6,7 +6,7 @@ import Header from "./header"
 import Footer from "./footer"
 import "../../styles/main.scss"
 
-const Layout = ({ children, hideSearchBar = false }) => {
+const Layout = ({ children, hideSearchBar = false, sectionClass = "" }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,7 +20,7 @@ const Layout = ({ children, hideSearchBar = false }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} hideSearchBar={hideSearchBar} />
-      <section className="section">
+      <section className={`section ${sectionClass}`}>
         {children}
       </section>
       <Footer />
