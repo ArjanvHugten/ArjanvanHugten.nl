@@ -3,6 +3,8 @@
 # My personal blog
 Repository of my personal website https://arjanvanhugten.nl/ created with gatsby.
 
+![Gatsby CI](https://github.com/ArjanvHugten/ArjanvanHugten.nl/workflows/Gatsby%20CI/badge.svg)
+
 ## Techniques used
 - [Gatsby](https://www.gatsbyjs.org/): Framework based on React for building website.
 - [React](https://reactjs.org/): Javascript library for building user interfaces.
