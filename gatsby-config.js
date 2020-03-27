@@ -119,5 +119,42 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve:`gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/public/**/*.html": [
+            "cache-control: public",
+            "cache-control: max-age=0", 
+            "cache-control: must-revalidate"
+          ],
+          "/*.js": [
+            "cache-control: public", 
+            "cache-control: max-age=31536000", 
+            "cache-control: immutable"
+          ],
+          "/*.css": [
+            "cache-control: public", 
+            "cache-control: max-age=31536000", 
+            "cache-control: immutable"
+          ],
+          "/sw.js": [
+            "cache-control: public",
+            "cache-control: max-age=0", 
+            "cache-control: must-revalidate"
+          ],
+          "/public/page-data/*": [
+            "cache-control: public",
+            "cache-control: max-age=0", 
+            "cache-control: must-revalidate"
+          ],
+          "/static/**/*": [
+            "cache-control: public",
+            "cache-control: max-age=31536000",
+            "cache-control: immutable"
+          ]
+        }
+      }
+    }
   ],
 }

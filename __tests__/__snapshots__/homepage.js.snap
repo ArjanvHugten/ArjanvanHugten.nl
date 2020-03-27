@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage renders correctly 1`] = `
+Array [
+  <header>
+    <div
+      className="container"
+    >
+      <nav
+        aria-label="main navigation"
+        className="navbar"
+        role="navigation"
+      >
+        <div
+          className="navbar-brand"
+        >
+          <a
+            className="navbar-item primary-color"
+            href="/"
+          >
+            Test title
+          </a>
+          <a
+            aria-expanded="false"
+            aria-label="menu"
+            className="navbar-burger burger "
+            data-target="navigationbar"
+            href="#menu"
+            onClick={[Function]}
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+            <span
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+        <div
+          className="navbar-menu "
+          id="navigationbar"
+        >
+          <div
+            className="navbar-start"
+          >
+            <div
+              className="navbar-item is-hidden-desktop"
+            >
+              <form
+                onSubmit={[Function]}
+              >
+                <div
+                  className="field has-addons"
+                >
+                  <div
+                    className="control search-field has-icons-left"
+                  >
+                    <input
+                      className="input"
+                      onChange={[Function]}
+                      placeholder="Search term"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      className="icon is-small is-left"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="svg-inline--fa fa-search fa-w-16 "
+                        data-icon="search"
+                        data-prefix="fas"
+                        focusable="false"
+                        role="img"
+                        style={Object {}}
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                          fill="currentColor"
+                          style={Object {}}
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    className="control"
+                  >
+                    <button
+                      className="button"
+                      type="submit"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <a
+              className="navbar-item"
+              href="/"
+            >
+              Home
+            </a>
+          </div>
+          <div
+            className="navbar-end"
+          >
+            <div
+              className="navbar-item is-hidden-touch"
+            >
+              <form
+                onSubmit={[Function]}
+              >
+                <div
+                  className="field has-addons"
+                >
+                  <div
+                    className="control search-field has-icons-left"
+                  >
+                    <input
+                      className="input"
+                      onChange={[Function]}
+                      placeholder="Search term"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      className="icon is-small is-left"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="svg-inline--fa fa-search fa-w-16 "
+                        data-icon="search"
+                        data-prefix="fas"
+                        focusable="false"
+                        role="img"
+                        style={Object {}}
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                          fill="currentColor"
+                          style={Object {}}
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    className="control"
+                  >
+                    <button
+                      className="button"
+                      type="submit"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div
+              className="navbar-item"
+            >
+              <div
+                className="buttons"
+              >
+                <a
+                  className="button is-primary"
+                  href="/contact-me/"
+                >
+                  <strong>
+                    Contact me
+                  </strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>,
+  <section
+    className="section "
+  >
+    <div
+      className="container main-page"
+    >
+      <div
+        className="columns is-centered"
+      >
+        <div
+          className="column is-two-thirds-tablet is-half-desktop is-one-third-widescreen"
+        >
+          <div
+            className="social-icons"
+          >
+            <nav
+              className="level is-mobile"
+            >
+              <div
+                className="level-item has-text-centered"
+              >
+                <div>
+                  <p
+                    className="heading"
+                  >
+                    stackoverflow
+                  </p>
+                  <p
+                    className="title"
+                  >
+                    <a
+                      className="social-icon-link"
+                      href="https://stackoverflow.com/users/6421230/a-van-hugten"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="svg-inline--fa fa-stack-overflow fa-w-12 "
+                        data-icon="stack-overflow"
+                        data-prefix="fab"
+                        focusable="false"
+                        role="img"
+                        style={Object {}}
+                        viewBox="0 0 384 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"
+                          fill="currentColor"
+                          style={Object {}}
+                        />
+                      </svg>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </nav>
+            <hr />
+          </div>
+          <h1
+            className="title small-title"
+          >
+            This is the title
+          </h1>
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <figure
+                className="image"
+              >
+                <div
+                  className=" gatsby-image-wrapper"
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "position": "relative",
+                    }
+                  }
+                >
+                  <div
+                    aria-hidden={true}
+                    style={
+                      Object {
+                        "paddingBottom": "66.796875%",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <img
+                    alt=""
+                    aria-hidden={true}
+                    src="data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABwBACdASoUAA0APtFUo0uoJKMhsAgBABoJQBOmUGUkz/gPOTZOwAwWlw60aADMg9k+QTRZO+w3OzFbtmhn1vRFhN6e+wvLvXXVpzlkF8FlqpAxRjOQppZXOmOIRIy5TN3DqUa1LBOZqnBCL/Sbs4j7e+a9SZojm/MhOYSUEqke/yFFU3NNcQXghLbs6gTuiPAqksjzVlBi5g+2jgLEvDwAAAA="
+                    style={
+                      Object {
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "contain",
+                        "objectPosition": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transitionDelay": "500ms",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <picture>
+                    <source
+                      sizes="(max-width: 450px) 100vw, 450px"
+                      srcSet="/static/2e43d1ea8c87d7b77c12a92ae3990dfd/34b62/profile-picture.webp 256w,
+/static/2e43d1ea8c87d7b77c12a92ae3990dfd/b8a88/profile-picture.webp 450w"
+                    />
+                    <img
+                      alt="My profile picture"
+                      loading="lazy"
+                      onLoad={[Function]}
+                      sizes="(max-width: 450px) 100vw, 450px"
+                      src="/static/2e43d1ea8c87d7b77c12a92ae3990dfd/b8a88/profile-picture.webp"
+                      srcSet="/static/2e43d1ea8c87d7b77c12a92ae3990dfd/34b62/profile-picture.webp 256w,
+/static/2e43d1ea8c87d7b77c12a92ae3990dfd/b8a88/profile-picture.webp 450w"
+                      style={
+                        Object {
+                          "height": "100%",
+                          "left": 0,
+                          "objectFit": "contain",
+                          "objectPosition": "center",
+                          "opacity": 0,
+                          "position": "absolute",
+                          "top": 0,
+                          "transition": "opacity 500ms",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </picture>
+                  <noscript
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<picture><source srcset=\\"/static/2e43d1ea8c87d7b77c12a92ae3990dfd/34b62/profile-picture.webp 256w,
+/static/2e43d1ea8c87d7b77c12a92ae3990dfd/b8a88/profile-picture.webp 450w\\" sizes=\\"(max-width: 450px) 100vw, 450px\\" /><img loading=\\"lazy\\" sizes=\\"(max-width: 450px) 100vw, 450px\\" srcset=\\"/static/2e43d1ea8c87d7b77c12a92ae3990dfd/34b62/profile-picture.webp 256w,
+/static/2e43d1ea8c87d7b77c12a92ae3990dfd/b8a88/profile-picture.webp 450w\\" src=\\"/static/2e43d1ea8c87d7b77c12a92ae3990dfd/b8a88/profile-picture.webp\\" alt=\\"My profile picture\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                      }
+                    }
+                  />
+                </div>
+              </figure>
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    My name
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    My function
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p>
+                  Test description
+                </p>
+                <span>
+                  <span
+                    className="primary-color"
+                  >
+                    C#
+                  </span>
+                  <span>
+                     | 
+                  </span>
+                </span>
+                <br />
+                <span>
+                  August 30, 1998
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>,
+  <footer>
+    <div
+      className="container has-text-centered"
+    >
+      <hr />
+      <p>
+        Copyright © 
+        2020
+         - 
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "This is the footer",
+            }
+          }
+        />
+      </p>
+    </div>
+  </footer>,
+]
+`;

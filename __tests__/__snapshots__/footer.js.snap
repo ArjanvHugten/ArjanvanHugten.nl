@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Renders correctly 1`] = `
+<footer>
+  <div
+    className="container has-text-centered"
+  >
+    <hr />
+    <p>
+      Copyright © 
+      2020
+       - 
+      <span
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "This is the footer",
+          }
+        }
+      />
+    </p>
+  </div>
+</footer>
+`;

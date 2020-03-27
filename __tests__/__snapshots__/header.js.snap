@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Renders correctly 1`] = `
+<header>
+  <div
+    className="container"
+  >
+    <nav
+      aria-label="main navigation"
+      className="navbar"
+      role="navigation"
+    >
+      <div
+        className="navbar-brand"
+      >
+        <a
+          className="navbar-item primary-color"
+          href="/"
+        >
+          Default Starter
+        </a>
+        <a
+          aria-expanded="false"
+          aria-label="menu"
+          className="navbar-burger burger "
+          data-target="navigationbar"
+          href="#menu"
+          onClick={[Function]}
+          role="button"
+        >
+          <span
+            aria-hidden="true"
+          />
+          <span
+            aria-hidden="true"
+          />
+          <span
+            aria-hidden="true"
+          />
+        </a>
+      </div>
+      <div
+        className="navbar-menu "
+        id="navigationbar"
+      >
+        <div
+          className="navbar-start"
+        >
+          <a
+            className="navbar-item"
+            href="/"
+          >
+            Home
+          </a>
+        </div>
+        <div
+          className="navbar-end"
+        >
+          <div
+            className="navbar-item"
+          >
+            <div
+              className="buttons"
+            >
+              <a
+                className="button is-primary"
+                href="/contact-me/"
+              >
+                <strong>
+                  Contact me
+                </strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+`;
