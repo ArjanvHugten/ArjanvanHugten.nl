@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const blogsQuery = `{
     blogs: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/blogs/" } }) {
         edges {
@@ -33,7 +35,7 @@ const queries = [
 {
     query: blogsQuery,
     transformer: ({ data }) => flatten(data.blogs.edges),
-    indexName: `Blogs`,
+    indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
     settings,
 },
 ]

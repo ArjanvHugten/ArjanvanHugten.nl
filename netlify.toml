@@ -1,0 +1,5 @@
+[context.production.environment]
+  GATSBY_ALGOLIA_INDEX_NAME = "prod_blogs"
+
+[context.deploy-preview.environment]
+  GATSBY_ALGOLIA_INDEX_NAME = "dev_Blogs"
