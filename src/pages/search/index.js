@@ -9,8 +9,6 @@ import Layout from "../../components/layout/layout"
 import SEO from "../../components/layout/seo"
 import "../../styles/search.scss"
 
-const searchIndice = { name: `Blogs`, title: `Blog Posts`, hitComp: `BlogHit` }
-
 const Results = connectStateResults(
     ({ searchState: state, searchResults: res, children }) =>
         res && res.nbHits > 0 ? children : `No results for '${state.query}'`
@@ -21,8 +19,9 @@ const Stats = connectStateResults(
         res && res.nbHits > 0 && `${res.nbHits} result${res.nbHits > 1 ? `s` : ``}`
 )
 
-export default function Search(data) {
-    let currentQuery = data.location.state ? data.location.state.query : ""
+export default function Search({ location }) {
+    const searchIndice = { name: process.env.GATSBY_ALGOLIA_INDEX_NAME, title: `Blog Posts`, hitComp: `BlogHit` }
+    let currentQuery = location.state ? location.state.query : ""
     const [query, setQuery] = useState(currentQuery)
     const searchClient = algoliasearch(
         process.env.GATSBY_ALGOLIA_APP_ID,
