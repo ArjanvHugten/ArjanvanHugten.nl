@@ -69,3 +69,11 @@ form {
 .panel-block {
   justify-content: center;
 }
+
+.about-me-certifcations {
+  margin-top: 20px;
+
+  .gatsby-image-wrapper {
+    max-width: 150px;
+  }
+}

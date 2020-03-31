@@ -15,7 +15,7 @@ export default ({ pageContext, data }) => {
 
   return (
     <Layout sectionClass={"blog-section"}>
-      <SEO title={frontmatter.title} />
+      <SEO title={frontmatter.title} description={frontmatter.intro} />
         <div className="container">
           <Breadcrumb crumbs={crumbs} />
           <h1 className="title">{frontmatter.title}</h1>
@@ -35,6 +35,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        intro
       }
     }
   }

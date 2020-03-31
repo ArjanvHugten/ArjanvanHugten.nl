@@ -3,7 +3,7 @@ path: "/blogs/my-top-ten-gatsby-plugins/"
 date: "2020-03-24"
 title: "My top ten gatsby plugins"
 intro: "In this blog I will show you my top ten gatsby plugins that you can use for your gatsby site. My personal blog is built on gatsby and uses this plugins. Read further and discover what plugins are nice to use and how you can use them."
-tags: [gatsby, react, netlify, netlify-cms, algolia]
+tags: [gatsby, plugins, react, netlify, netlify-cms, algolia]
 cardImage: ../src/images/gatsby-logo.jpg
 ---
 

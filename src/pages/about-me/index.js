@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/layout/seo"
@@ -21,6 +22,14 @@ export default ({ data }) => {
               <p>
                 Want to read some of my blogs? <Link to="/blogs/">Click here!</Link> Do you need something of me? <Link to="/contact-me/">Contact me!</Link>
               </p>
+              <div className="about-me-certifcations level is-mobile">
+                <div className="level-item">
+                  <div>
+                      <p className="heading">Kentico certified</p>
+                      <Img fluid={data.kenticoCertifiedBadgeData.childImageSharp.fluid} alt="Kentico certified badge" />
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="column is-half-desktop">
               <div className="columns is-centered">
@@ -36,7 +45,7 @@ export default ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query aboutMePageQuery {
+  query kenticoCertifiedBadgeQueryAndAboutMePageQuery {
     aboutMePageData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "aboutme" } } }) {
       edges {
         node {
@@ -45,6 +54,13 @@ export const pageQuery = graphql`
             title
             subtitle
           }
+        }
+      }
+    }
+    kenticoCertifiedBadgeData: file(relativePath: { eq: "kentico-certified-developer-12.png" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 150) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
