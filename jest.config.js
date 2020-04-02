@@ -13,4 +13,5 @@ module.exports = {
     },
     setupFiles: [`<rootDir>/loadershim.js`],
     setupFilesAfterEnv: ["<rootDir>/setup-test-env.js"],
+    reporters: ["default", "jest-junit"],
 }

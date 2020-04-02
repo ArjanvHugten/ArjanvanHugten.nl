@@ -3,15 +3,23 @@ orbs:
   node: circleci/node@1.1.6
 jobs:
   build-and-test:
-    executor:
-      name: node/default
+    executor: node/default
     steps:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm install
-            - run: npm run-script build
-            - run: npm test
+            - run: yarn install
+            - run: yarn build
+            - run:
+                name: Run tests with JUnit as reporter
+                command: yarn test
+                environment:
+                  JEST_JUNIT_OUTPUT_DIR: "reports/junit/js-test-results.xml"
+            - store_test_results:
+                path: reports/junit
+            - store_artifacts:
+                path: reports/junit
+
 workflows:
     build-and-test:
       jobs:
