@@ -8,7 +8,7 @@ exports[`Footer Renders correctly 1`] = `
     <hr />
     <p>
       Copyright © 
-      2020
+      2021
        - 
       <span
         dangerouslySetInnerHTML={
